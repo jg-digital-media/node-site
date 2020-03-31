@@ -14,8 +14,9 @@ function view(templateName, values, response) {
     //read from the template file
 
  
-    var fileContents = fs.readFileSync("./views/" + templateName + ".html");
+    var fileContents = fs.readFileSync("./views/" + templateName + ".html", {encoding: "utf8"});
     fileContents = mergeValues(values, fileContents);
+    
     response.write(fileContents);
 };
   

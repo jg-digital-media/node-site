@@ -1,4 +1,5 @@
-let router = require("./router.js")
+let router = require("./router.js");
+let render = require("./render.js");
 
 //Create a webserver
 const http = require('http');
